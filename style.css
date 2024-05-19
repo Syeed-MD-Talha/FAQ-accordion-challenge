@@ -1,0 +1,112 @@
+@font-face {
+    font-family:WorkSans;
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #faeeff;
+    font-family: 'WorkSans';
+    font-size: 16px;
+    position: relative;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%)
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+.bg-img{
+    margin: 0px;
+    padding: 0px;
+    height: 300px;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+}
+
+.container{
+    width: 500px;
+    background-color: white;
+    margin:8% auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.bg-div{
+    background-color: rgba(255, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10px;
+}
+.header{
+    display: flex;
+    font-size: 50px;
+    gap: 20px;
+    align-items: center;
+    font-weight: bold;
+}
+.header img{height: 40px;}
+
+.question{
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#minus{display: none;}
+.answer{
+    display: none;
+    color:var(--Grayish-purple);
+    margin-top: 20px;
+}
+.faqs{
+    margin-top: 10px;
+    width: 100%;
+    /* background-color: cyan; */
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.043);
+}
+.faqs:last-child{border-bottom: none;}
+
+
+
+
+
+@media (max-width:600px) {
+    .container{
+        width: 70vw;
+        background-color: white;
+        margin:25% auto;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 30px;
+        border-radius: 10px;
+    }
+    .question span{max-width: 250px;}
+    .bg-img{height: 280px;}
+    .header{font-size: 30px;}
+    .header img{height: 25px;}
+    
+}
+@media (min-width:600px) and (max-width:1000px){
+    .container{
+        width: 70vw;
+        background-color: white;
+        margin:25% auto;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 30px;
+        border-radius: 10px;
+    }
+    .question span{max-width: 350px;}
+    .bg-img{height: 380px;}
+    .header{font-size: 40px;}
+    .header img{height: 25px;}
+    
+}
